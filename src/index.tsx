@@ -4,6 +4,13 @@ import './styles/index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
+import { Provider, Client, defaultExchanges } from 'urql';
+
+const client = new Client({
+  url: 'http//localhost:4000',
+  exchanges: defaultExchanges
+});
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
